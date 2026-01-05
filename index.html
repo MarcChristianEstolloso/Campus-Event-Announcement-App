@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campus Event Announcements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Campus Events</h1>
+    <p>Stay updated with the latest events</p>
+</header>
+
+<section class="controls">
+    <input type="text" id="search" placeholder="Search events...">
+    <select id="filter">
+        <option value="all">All Events</option>
+        <option value="upcoming">Upcoming</option>
+        <option value="past">Past</option>
+    </select>
+    <button onclick="openForm()">+ Add Event</button>
+</section>
+
+<section id="event-list" class="event-list"></section>
+
+<!-- Add Event Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h2>Add New Event</h2>
+        <input type="text" id="title" placeholder="Event Title">
+        <input type="date" id="date">
+        <textarea id="description" placeholder="Event Description"></textarea>
+        <button onclick="addEvent()">Add</button>
+        <button class="close" onclick="closeForm()">Cancel</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
